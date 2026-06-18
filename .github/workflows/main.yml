@@ -1,4 +1,4 @@
-name: Build ZMK
+name: Build ZMK firmware
 
 on:
   push:
@@ -9,13 +9,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Build ZMK
-        uses: zmkfirmware/zmk-build-action@v1
-        with:
-          shield: rivkey_left rivkey_right
-          board: akdk_bt1
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      shield: rivkey_left rivkey_right
+      board: akdk_bt1
