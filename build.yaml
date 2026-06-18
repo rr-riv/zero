@@ -1,0 +1,5 @@
+include:
+  - board: akdk_bt1
+    shield: rivkey_left
+  - board: akdk_bt1
+    shield: rivkey_right
