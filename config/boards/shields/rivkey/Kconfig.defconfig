@@ -1,0 +1,12 @@
+if SHIELD_RIVKEY_LEFT || SHIELD_RIVKEY_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "rivkey"
+
+config ZMK_SPLIT
+    default y
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y if SHIELD_RIVKEY_LEFT
+
+endif
