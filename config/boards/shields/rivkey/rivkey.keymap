@@ -1,8 +1,24 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-&physical_layout0 {
-    bindings = <
-        /* ここに後であなたのキーマップを入れる */
-    >;
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+                /* 左側 */
+                &kp Q    &kp W    &kp E    &kp R    &kp T
+                &kp A    &kp S    &kp D    &kp F    &kp G
+                &kp Z    &kp X    &kp C    &kp V    &kp B
+                &kp ESC  &kp TAB  &kp LSHFT &kp LCTRL &kp LALT
+
+                /* 右側 */
+                &kp Y    &kp U    &kp I    &kp O    &kp P
+                &kp H    &kp J    &kp K    &kp L    &kp SEMI
+                &kp N    &kp M    &kp COMMA &kp DOT  &kp SLASH
+                &kp RALT &kp RCTRL &kp RSHFT &kp ENTER &kp BSPC
+            >;
+        };
+    };
 };
