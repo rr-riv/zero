@@ -1,0 +1,31 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+#include "layouts.dtsi"
+
+/ {
+    chosen {
+        zmk,physical-layout = &physical_layout0;
+    };
+
+    kscan0: kscan {
+        compatible = "zmk,kscan-gpio-matrix";
+        wakeup-source;
+        diode-direction = "col2row";
+
+        row-gpios =
+            <&akdk_d 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+            <&akdk_d 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+            <&akdk_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+            <&akdk_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+
+        col-gpios =
+            <&akdk_d 13 GPIO_ACTIVE_HIGH>,
+            <&akdk_d 12 GPIO_ACTIVE_HIGH>,
+            <&akdk_d 11 GPIO_ACTIVE_HIGH>,
+            <&akdk_d 10 GPIO_ACTIVE_HIGH>,
+            <&akdk_d 8 GPIO_ACTIVE_HIGH>;
+    };
+};
+
+&physical_layout0 {
+    kscan = <&kscan0>;
+};
