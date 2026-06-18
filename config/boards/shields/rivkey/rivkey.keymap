@@ -1,0 +1,8 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+&physical_layout0 {
+    bindings = <
+        /* ここに後であなたのキーマップを入れる */
+    >;
+};
