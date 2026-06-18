@@ -11,5 +11,5 @@ jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
     with:
-      shield: rivkey_left rivkey_right
+      shields: rivkey_left rivkey_right
       board: akdk_bt1
