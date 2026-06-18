@@ -2,6 +2,6 @@ file_format: "1"
 id: rivkey
 name: rivkey
 type: shield
-url: https://github.com/あなたのユーザー名/rivkey-zmk-config
+url: https://github.com/rr-riv/rivkey-zmk-config
 requires: [akdk_bt1]
 exposes: []
